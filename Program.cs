@@ -15,8 +15,13 @@ namespace Hello
 
             Console.WriteLine("Fibonacci Numbers 1-15:");
 
-            for(int i=0; i<15; i++) {
-                Console.WriteLine($"{i+1}: {FibonacciNumber(i)}");
+            // for(int i=0; i<15; i++) {
+            //     Console.WriteLine($"{i+1}: {FibonacciNumber(i)}");
+            // }
+
+            var generator = new FibonacciGenerator();
+            foreach(var digit in generator.Generate(15)) {
+                Console.WriteLine(digit);
             }
         }
 
